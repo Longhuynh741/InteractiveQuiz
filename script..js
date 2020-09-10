@@ -138,13 +138,14 @@ function showResults() {
     submitName.classList.remove("hide");
 }
 
+setInterval(startTimer, 1000);
+
 function startTimer() {
     timerEL.textContent = timer + " seconds remaining";
     timer--;
-    console.log(timer) 
-    if (timeLeft === 0) {
+
+    if (timer === 0) {
         timerEl.textContent = "";
         clearInterval(timeInterval);
     }
-    1000;
 }
