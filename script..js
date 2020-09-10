@@ -2,6 +2,7 @@ console.log(
     "Hello World")
 
 var highscoreEL = document.getElementById("highscores");
+var scoresList = document.getElementById("highscores-list")
 var timerEL = document.getElementById("timer");
 var questionCont = document.getElementById("question-container");
 var quizSummary = document.getElementById("quiz-summary");
@@ -74,7 +75,6 @@ var quizQuestions = [
 
 startbtn.addEventListener("click", startQuiz);
 
-
 function generateQuiz() {
     console.log("quiz")
     var currentQuestion = quizQuestions[currentQuestIndex];
@@ -119,7 +119,7 @@ function answerCheck(choice) {
     else {
         console.log("wrong answer");
         score--;
-        timer = -20;
+        timer--;
         currentQuestIndex++;
         generateQuiz();
         console.log(score);
@@ -138,6 +138,7 @@ function showResults() {
     submitName.classList.remove("hide");
 }
 
+
 setInterval(startTimer, 1000);
 
 function startTimer() {
@@ -149,3 +150,4 @@ function startTimer() {
         clearInterval(timeInterval);
     }
 }
+
