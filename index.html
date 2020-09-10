@@ -1,50 +1,49 @@
 <!DOCTYPE html>
 <html class="no-js">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title></title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <link rel="stylesheet" href="style.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div>
-        <h2 id="highscores">View High Scores</h2>
-        <h2 id="timer">Timer goes here</h2>
+      <h2 id="highscores">View High Scores</h2>
+      <h2 id="timer">Timer goes here</h2>
     </div>
     <div class="container">
-        <div class="question-container">
-            <h1>Coding Quiz Challenge</h1>
-        </div>
-
-        <div class="quiz-summary"></div>
-        <h3>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus atque
-            ratione blanditiis necessitatibus vel sunt aut ipsum nulla, autem quidem
-            obcaecati. Voluptatibus id aperiam exercitationem adipisci omnis dolores
-            iusto blanditiis.
+      <div id="question-container">
+        <h1 class="opening-statement">Coding Quiz Challenge</h1>
+        <h3 class="opening-statement">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
+          atque ratione blanditiis necessitatibus vel sunt aut ipsum nulla,
+          autem quidem obcaecati. Voluptatibus id aperiam exercitationem
+          adipisci omnis dolores iusto blanditiis.
         </h3>
+      </div>
 
-    <div id="answer-btns"> 
-        <button class="btn"> Answer 1 </button>
-        <button class="btn"> Answer 2 </button>
-        <button class="btn"> Answer 3</button>
-        <button class="btn"> Answer 4 </button>
-
+      <div>
+        <h1 id="questionsArray" class="hide"> Question Here </h1>
+        <div id="answer-btns" class="hide">
+            <button id="a" onclick="answerCheck('a')">A</button>
+            <button id="b" onclick="answerCheck('b')">B</button>
+            <button id="c" onclick="answerCheck('c')">C</button>
+            <button id="d" onclick="answerCheck('d')">D</button>
+        </div>
+        <form id="highscore-form" class = "hide"> <textarea> </textarea> </form>
+        <button id="submit-Name" class="hide"> Submit To High Score</button>
+        <button id="start-button">Start</button>
+      </div>
     </div>
-
-    <button id="submit-button">Submit</button>
-
-    </div>
-
-</div>
     <script src="./script..js" async defer></script>
-</body>
-
+  </body>
 </html>

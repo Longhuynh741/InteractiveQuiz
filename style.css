@@ -9,3 +9,15 @@
     margin-left: 90%;
     margin-top: -56px
 }
+
+.hide {
+    display: none;
+}
+
+#highscore-form {
+    margin: 10px;
+}
+
+#submit-Name {
+    margin: 10px;
+}
