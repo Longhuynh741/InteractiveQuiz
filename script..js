@@ -17,6 +17,7 @@ var formHigh = document.getElementById("highscore-form")
 var submitName = document.getElementById("submit-Name")
 var currentQuestIndex = 0
 var score = 5
+
 var timer = 80
 var quizQuestions = [
     {
@@ -100,6 +101,7 @@ function startQuiz() {
     questionEl.classList.remove("hide");
     ansbtns.classList.remove("hide");
     generateQuiz();
+    startTimer();
 }
 
 
@@ -116,7 +118,8 @@ function answerCheck(choice) {
 
     else {
         console.log("wrong answer");
-        score --;
+        score--;
+        timer = -20;
         currentQuestIndex++;
         generateQuiz();
         console.log(score);
@@ -133,4 +136,15 @@ function showResults() {
     questionCont.innerHTML = "<h1> All Done!! </h1> Your results is " + score + "/5";
     formHigh.classList.remove("hide");
     submitName.classList.remove("hide");
+}
+
+function startTimer() {
+    timerEL.textContent = timer + " seconds remaining";
+    timer--;
+    console.log(timer) 
+    if (timeLeft === 0) {
+        timerEl.textContent = "";
+        clearInterval(timeInterval);
+    }
+    1000;
 }
